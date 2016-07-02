@@ -2,26 +2,27 @@
 {
     public class NumeroDeCuentaIBAN
     {
-        private static string codigoDePais;
-        private static int elNumeroVerificador;
-        private static string elRequerimiento;
-        private static int elRequerimientoComoNumero;
-        private static string letrasDelPais;
-
         public static string CalcularNumeroDeCuentaIBAN(string cuentaCliente)
         {
-            letrasDelPais = "1227";
-            codigoDePais = "00";
-            elRequerimiento = cuentaCliente + letrasDelPais + codigoDePais;
+            const string letrasDelPais = "1227";
+            const string codigoDePais = "00";
+            string elRequerimiento = cuentaCliente + letrasDelPais + codigoDePais;
 
-            elRequerimientoComoNumero = int.Parse(elRequerimiento);
-            elNumeroVerificador = 98 - (elRequerimientoComoNumero % 97);
+            decimal elRequerimientoComoNumero = decimal.Parse(elRequerimiento);
+            decimal elNumeroVerificador = 98 - (elRequerimientoComoNumero % 97);
 
+            string losDosDigitosVerificadores;
             if (elNumeroVerificador < 10)
             {
-
+                losDosDigitosVerificadores = "0" + elNumeroVerificador;
             }
-            return "";
+            else
+            {
+                losDosDigitosVerificadores = elNumeroVerificador.ToString();
+            }
+
+            return $"CR{losDosDigitosVerificadores}{cuentaCliente}";
+
         }
     }
 }
