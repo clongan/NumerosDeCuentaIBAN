@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NumerosDeCuentaIBAN\2 Con Funciones\NumeroDeCuentaIBAN.cs" />
     <Compile Include="NumerosDeCuentaIBAN\1 ComoUnProcedimiento\NumeroDeCuentaIBAN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

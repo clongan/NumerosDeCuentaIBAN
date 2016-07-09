@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ComoUnProcedimiento;
+using ConFunciones;
 
-namespace ComoUnProcedimiento_Tests
+namespace ConFunciones_Tests
 {
     [TestClass]
-    public class ComoUnProcedimiento_NumeroDeCuentaIBAN_Tests
+    public class ConFunciones_NumeroDeCuentaIBAN_Tests
     {
         private string elResultadoEsperado;
         private string elResultadoObtenido;

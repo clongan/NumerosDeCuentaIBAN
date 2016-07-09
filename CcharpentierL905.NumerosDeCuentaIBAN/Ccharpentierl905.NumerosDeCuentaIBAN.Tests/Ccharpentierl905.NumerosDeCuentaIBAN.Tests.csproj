@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="NumerosDeCuentaIBAN_Tests\2 Con Funciones\NumeroDeCuentaIBAN_Tests.cs" />
     <Compile Include="NumerosDeCuentaIBAN_Tests\1 Como Un Procedimiento\NumeroDeCuentaIBAN_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
