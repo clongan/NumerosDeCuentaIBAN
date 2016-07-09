@@ -18,7 +18,6 @@
         private static decimal ObtenerElRequerimiento(string cuentaCliente)
         {
             string elRequerimiento = DeterminarElRequerimiento(cuentaCliente);
-
             return decimal.Parse(elRequerimiento);
         }
 
@@ -32,15 +31,15 @@
         private static string DeterminarLosDigitosVerificadores(decimal elRequerimientoComoNumero)
         {
             decimal elNumeroVerificador = CalcularElNumeroVerificador(elRequerimientoComoNumero);
+            return ObtenerLosDosDigitosVerificadores(elNumeroVerificador);
+        }
 
+        private static string ObtenerLosDosDigitosVerificadores(decimal elNumeroVerificador)
+        {
             if (elNumeroVerificador < 10)
-            {
                 return ObtenerElDigitoVerificadorConUnDigitoComoTexto(elNumeroVerificador);
-            }
             else
-            {
                 return ObtenerElDigitoVerificadorConDosDigitosComoTexto(elNumeroVerificador);
-            }
         }
 
         private static decimal CalcularElNumeroVerificador(decimal elRequerimientoComoNumero)
